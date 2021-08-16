@@ -23,7 +23,7 @@
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container" > <!--class="navbar-brand"-->
+            <div class="container" >
                 <div class="logo-margin">
                     <a href="#page-top"><img src="assets/img/logo-custom-wh.png" height = "60px" width="auto" alt="..." /></a>
                 </div>
@@ -31,43 +31,343 @@
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Curriculum</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education">Partners</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
+        <!-- Masthead static-->
+        <header class="masthead">
+            <div class="container">
+            </br>
+            </br>
+            </br>
+               <div class="heading-logo">
+                 <img src="assets/img/logo-custom-wh.png" width="80%" alt="">
+               </div>
+            </div>
+        </header>
 
-        
+        <!-- Masthead video-->
+       <!--  <header class="masthead videoWrap">
+          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="vid">
+            <source src="assets/img/Class-comp-10s-dark-blur.mp4" type="video/mp4" />
+          </video>
+            <div class="container">
+            </br>
+            </br>
+               <div class="heading-logo">
+                 <img src="assets/img/logo-custom-wh.png" width="80%" alt="" id="header-image">
+               </div>
+            </div>
+        </header> -->
+
+
+        <!-- Mission-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">About Us</h2>
+                    <div class="row about-top-row">
+                        <div> <!--class="col-huge-6 col-md-fill" -->
+                            <h4 class="text-muted">Our Work</h4>
+                            <p>Brave Behind Bars is an introductory computer science and career-readiness program for incarcerated women. Based out of <a href="https://www.teji.mit.edu/">The Educational Justice Institute at MIT</a>, and taught both online and in-person, our Summer '21 pilot program brought together 30 women from four correctional facilities across New England. Together, our students developed skills in digital literacy, web design, and career-readiness, building websites to help address some of society's most pressing issues.</p>
+                            <!-- <a href="#portfolio" class="btn btn-primary btn-xl text-uppercase">See Examples</a> -->
+                        </div>
+                        <!--<div class="col-huge-6 col-md-fill">
+                            <img src="assets/img/brave black-white.png" class="about-photo">
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+            <div class="about-container">
+                <div class="why-it-matters text-center">
+                    <div>
+                            <h4 class="text-muted">Why It Matters</h4>
+                            <p>The US has the highest incarceration rate in the world, and the incarceration rate among women is growing even faster than the rate among men. These high rates are partly caused by recidivism: those who are released from prison almost always return. Educational programs have been shown to drastically reduce recidivism, but educational opportunities fall below demand and often don't equip students with marketable skills. At Brave Behind Bars, we address this challenge by helping incarcerated women develop the technical skills and self-efficacy needed to thrive post-release.</p>
+                    </div>
+                </div>
+                <div class="counts text-center">
+                    <a href="https://www.sentencingproject.org/wp-content/uploads/2016/02/Incarcerated-Women-and-Girls.pdf">
+                    <div>
+                        <p>In the last 40 years, the number of incarcerated women has increased by</p>
+                        <span data-toggle="counter-up">700</span><span>%</span>
+                        <div class="box-hover"><i class="fa fa-hand-pointer" aria-hidden="true"></i> View Study</div>
+                    </div></a>
+                </div>
+                <div class="counts text-center">
+                    <a href="https://bjs.ojp.gov/content/pub/pdf/18upr9yfup0514.pdf">
+                    <div>
+                        <p> The rate of returning to prison within 9 years of release is over</p>
+                        <span data-toggle="counter-up">83</span><span>%</span>
+                        <div class="box-hover"><i class="fa fa-hand-pointer" aria-hidden="true"></i> View Study</div>
+                    </div></a>
+                </div>
+                <div class="counts text-center">
+                    <a href="https://www.rand.org/pubs/research_reports/RR266.html">
+                    <div>
+                        <p>Education programs have been shown to reduce recidivism by over</p>
+                        <span data-toggle="counter-up">43</span><span>%</span>
+                        <div class="box-hover"><i class="fa fa-hand-pointer" aria-hidden="true"></i> View Study</div>
+                    </div></a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase ">Curriculum</h2>
+                    <p>Brave Behind Bars is designed to teach incarcerated students the fundamentals of webprogramming, building self-efficacy and digital literacy in the process. It has three main parts: core technical skills, career-readiness, and a capstone project. </p> <br>
+                
+                     <div class="row">
+                    <div class="col-md-4">
+                        <p> <strong>Core technical skills</strong> <br> The curriculum teaches participants the fundamentals of HTML, CSS and Javascript. We also introduce students to Bootstrap and version control using Github. </p> 
+                    </div>
+
+                    <div class="col-md-4">
+                        <p> <strong>Career-readiness</strong> <br> The class includes dedicated lectures on CV writing, presentation and public speaking. Students are also introduced to relevant technology-facing career paths by guest lecturers.</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <p> <strong>Capstone project</strong><br> Students apply the taught material to build a website centered on addressing challenges to affect social impact in their communities. Topics include domestic violence and addiction. </p>
+                        <!-- Examples of topics include websites providing information and support lines for victims of domestic violence, and websites that connect formerly with currently incarcerated students to help procure educational textbooks. -->
+                    </div>
+
+                </div>
+                <br> <br>
+                    <h3 class="section-subheading text-muted">A sample of websites designed by the Summer '21 cohort will be published below in September 2021.</h3>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Services-->
+        <section class="page-section" id="education">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Partners</h2>
+                    <!--<h3 class="section-subheading text-muted">We have partnered with a non-profit to adapt the teaching curriculum and two institutes of higher education to offer college credit for our course.</h3>-->
+                </div>
+                <div class="row text-center">
+                    <div class="col-lg-4 partner-col">
+                        <div class="row text-center partner-logo">
+                              <a href="https://www.bfit.edu/">
+                                    <img src="assets/img/logos/BFIT_logo_transparent.png" style="width:170px">
+                              </a>
+                        </div>
+                        <div class="row text-center partner-name">
+                            <h4 class="my-3"> Benjamin Franklin Institute of Technology </h4>
+                        </div>
+                        <div class="row text-center partner-description">
+                            <p class="text-muted">Upon successful completion of our program, our Massachusetts-based students are awarded college credit for BFIT's "Web Design 1" course, which is a part of BFIT's <a href="https://www.bfit.edu/academics/academic-programs/computer-technology/">Computer Information Technology</a> program.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 partner-col">
+                        <div class="row text-center partner-logo">
+                            <a style="text-align: center; display: block; margin: auto;" href="https://www.bravecourse.com/">
+                                <img src="assets/img/logos/Brave_logo.png" style="width:234px">
+                            </a>
+                        
+                        </div>
+                        <div class="row text-center partner-name">
+                            <h4 class="my-3">Brave Course</h4>
+                        </div>
+                        <div class="row text-center partner-description">
+                            <p class="text-muted">Our curriculum was developed by <a href="https://www.bravecourse.com/">Brave Course</a>, a non-profit which specializes in running coding bootcamps for young women. Brave Course also helped provide teaching staff for our Summer '21 pilot program. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 partner-col">
+                        <div class="row text-center partner-logo">
+                            <a href="https://www.wccc.me.edu/">
+                                <img src="assets/img/logos/WCCC_logo.jpg" style="width:218px">
+                            </a>
+                        </div>
+                        <div class="row text-center partner-name">
+                            <h4 class="my-3">Washington County Community College</h4>
+                        </div>
+                        <div class="row text-center partner-description">
+                            <p class="text-muted">Upon successful completion of our program, our Maine-based students are awarded college elective credit for WCCC's <a href="https://www.wccc.me.edu/academics/programs/programs-study/computer-technology/">Computer Technology</a> program.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Partners -->
+        <!-- <section class="page-section bg-light" id="facilities">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Facility Partners</h2>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Team</h2>
+                    <h3 class="section-subheading text-muted">Operating out of The Educational Justice Institute at MIT, Brave Behind Bars was launched by Martin and Marisa in September 2020. Since that time, we have partnered with correctional facilities, accrediting universities, the education non-profit Brave Course, and have been joined by 8 MIT affiliates who help instruct and coach students.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/martin-square.jpeg" alt="..." />
+                            <h4>Martin Nisser</h4>
+                            <p class="text-muted">Martin is a 5th year PhD student in Computer Science at MIT. His work centers on democratizing technology, both hardware and software.</p>
+                            <!--<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
+                            <a class="btn btn-dark btn-social mx-2" href="http://martinnisser.org/"><i class="fas fa-home"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/martin-nisser-34658a54/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/marisa-square.png" alt="..." />
+                            <h4>Marisa Gaetz</h4>
+                            <p class="text-muted">Marisa is a 2nd year PhD student in Mathematics at MIT. She works on solutions to mass incarceration with TEJI via education and technology.</p>
+                            <!--<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
+                            <a class="btn btn-dark btn-social mx-2" href="http://www.mit.edu/~mgaetz/"><i class="fas fa-home"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/marisa-gaetz-435a30186/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-2"> </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Mission-->
+       <!--  <section class="page-section" id="testimonials">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase dark-bg">Testimonials</h2>
+                    <div class="row">
+                      <div class="col-md-4 dark-bg">
+                        <h4> Student #1 </h4>
+                        <p>
+                          This class was awesome. I learnt so much, and Martin was my favorite coach. He's so smart.
+                        </p>
+                      </div>
+                      <div class="col-md-4 dark-bg">
+                        <h4> Student #2 </h4>
+                        <p>
+                          This class was awesome. I learnt so much, and Martin was my favorite coach. He's so smart.
+                        </p>
+                      </div>
+                      <div class="col-md-4 dark-bg">
+                        <h4> Student #3 </h4>
+                        <p>
+                          This class was awesome. I learnt so much, and Martin was my favorite coach. He's so smart.
+                        </p>
+                      </div>
+
+                    </div>
+
+                  </br>
+                  </br>
+                  </br>
+                  </br>
+
+                    <div class="row">
+                      <div class="col-md-4 dark-bg">
+                        <h4> Student #4 </h4>
+                        <p>
+                          This class was awesome. I learnt so much, and Martin was my favorite coach. He's so smart.
+                        </p>
+                      </div>
+                      <div class="col-md-4 dark-bg">
+                        <h4> Student #5 </h4>
+                        <p>
+                          This class was awesome. I learnt so much, and Martin was my favorite coach. He's so smart.
+                        </p>
+                      </div>
+                      <div class="col-md-4 dark-bg">
+                        <h4> Student #6 </h4>
+                        <p>
+                          This class was awesome. I learnt so much, and Martin was my favorite coach. He's so smart.
+                        </p>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <!-- Clients-->
+        <section class="page-section" id="sponsors">
+        <div class="py-5">
+            <div class="container">
+              <div class="text-center"> <h2 class="section-heading text-uppercase"> Sponsors </h2>
+              <h3 class="section-subheading text-muted">We are incredibly grateful for our sponsors, who make our work possible. </h3> </div>
+                <div class="row align-items-center">
+                    <div class="col-md-4 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/csail.svg" alt="..." /></a>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/harbus-clean.png" alt="..." /></a>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <a href="#!"><img class="img-fluid img-brand-2 d-block mx-auto" src="assets/img/logos/coop.png" alt="..." /></a>
+                    </div>
+                </div>
+                <br>
+                <div class="row align-items-center">
+                    <div class="col-md-2 my-3"></div>
+                    <div class="col-md-4 my-3">
+                        <a href="#!"><img class="img-fluid img-brand-2 d-block mx-auto" src="assets/img/logos/ICEO-edit.png" alt="..." /></a>
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <a href="#!"><img class="img-fluid img-brand-2 d-block mx-auto" src="assets/img/logos/ideas-edit.png" alt="..." /></a>
+                    </div>
+                    <div class="col-md-2 my-3"></div>
+                </div>
+            </div>
+        </div>
+      </section>
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">
-                <br>
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Website is Coming Soon!</h2>
-                    <h3 class="section-subheading text-muted">Sign up below to be notified when we launch.</h3>
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">We would love to hear from you! Fill out the form below, or contact us directly at <a href="mailto:bravebehindbars@mit.edu">bravebehindbars@mit.edu</a>.</h3>
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form action="https://formspree.io/f/xeqvllol" method="post" id="contactForm"> <!--data-sb-form-api-token="API_TOKEN" -->
+                <form action="https://formspree.io/f/xeqvllol" method="post" id="contactForm"> 
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
-                            <div class="form-group">
+                            <div>
                                 <!-- Name input-->
                                 <div class="row align-items-stretch">
-                                    <div class="col-md-6 first-name">
-                                        <input class="form-control" id="firstname" name="first name" type="text" placeholder="First Name *" data-sb-validations="required" />
+                                    <div class="col-md-6 first-name form-group">
+                                        <input class="form-control" id="firstname" name="first name" type="text" placeholder="First Name *" required />
                                     </div>
-                                    <div class="col-md-6 last-name">
-                                        <input class="form-control" id="lastname" name="last name" type="text" placeholder="Last Name *" data-sb-validations="required" />
+                                    <div class="col-md-6 last-name form-group">
+                                        <input class="form-control" id="lastname" name="last name" type="text" placeholder="Last Name *" required />
                                     </div> 
                                 </div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input -->
-                                <input class="form-control" id="email" name="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" name="email" type="email" placeholder="Your Email *" required/>
                             </div>
                             <div class="form-group mb-md-0">
                                 <select class="form-control" id="category" name="category" form="contactForm">
@@ -82,24 +382,11 @@
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea class="form-control" id="message" name="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="Your Message"></textarea>
                             </div>
                         </div>
                     </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+
                     <!-- Submit Button-->
                     <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Send Message</button>
                     </div>
@@ -116,11 +403,23 @@
             </div>
         </section> -->
 
-       
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-6 text-lg-start">
+                        <img src="assets/img/logos/TEJI.png" height="60px">
+                    </div>
+                    <div class="col-sm-6 text-lg-end">
+                        <img src="assets/img/logos/MIT.png" height="50px">
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!-- Extras -->
+
         <script src="assets/vendor/jquery/jquery.min.js"></script>
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
         <script src="assets/vendor/php-email-form/validate.js"></script>
         <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
@@ -128,15 +427,12 @@
         <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
         <script src="assets/vendor/aos/aos.js"></script>
 
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
         <script>
         setTimeout(function(){ window.scrollTo(0,0); }, 10);
         </script>
