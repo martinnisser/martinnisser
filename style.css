@@ -1194,11 +1194,42 @@ p {
 /*End of video code*/
 
 #testimonials {
-  background-image: url("assets/img/prison-1.jpg");
-  /* background-image: url("assets/img/Brave-logo.png"); */
-  background-size: cover;
-  height: 700px;
+  background-color: #212529;
 }
+
+
+@media (min-width: 768px) {
+
+  #testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)) , url("assets/img/prison-1.jpg");
+    background-size: cover;
+    height: 800px;
+  }
+
+  .top {
+    padding-bottom: 30px;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  #testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)) , url("assets/img/prison-1.jpg");
+    background-size: cover;
+    height: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  #testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)) , url("assets/img/prison-1.jpg");
+    background-size: cover;
+    height: 600px;
+  }
+}
+
 
 #logo-section {
   background-image: url("assets/img/logo-custom-bl.png");
