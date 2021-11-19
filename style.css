@@ -888,10 +888,10 @@ textarea.form-control {
 }
 /* arrow color */
 .flickity-prev-next-button .arrow {
-  fill: white;
+  fill: darkgray;
 }
 .flickity-prev-next-button.no-svg {
-  color: white;
+  color: darkgray;
 }
 /* closer to edge */
 .flickity-prev-next-button.previous { left: 0; }
