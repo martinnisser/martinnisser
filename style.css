@@ -1265,7 +1265,7 @@ p {
 /*Start of video code*/
 
 
-/*header {
+header {
  position: relative;
  overflow: hidden;
 }
@@ -1285,7 +1285,7 @@ p {
   height: auto;
   z-index: 0;
   transform: translateX(-50%) translateY(-50%);
-}*/
+}
 
 /*End of video code*/
 
