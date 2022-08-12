@@ -1249,9 +1249,10 @@ p {
     margin-right: 0;
   }
 }
- header.masthead {
+ 
+ .masthead {
   padding-top: 10.5rem;
-  padding-bottom: 6rem;
+  padding-bottom: 10rem;
   text-align: center;
   color: #fff;
   background-image: url("assets/img/prison-1.jpg");
@@ -1260,15 +1261,12 @@ p {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
 } 
 
 /*Start of video code*/
 
-
-header {
- position: relative;
- overflow: hidden;
-}
 
 .heading-logo {
   position: relative;
@@ -1290,11 +1288,12 @@ header {
 /*End of video code*/
 
 #testimonials {
-  background-color: #212529;
+  padding-top: 0rem;
+  /*background-color: #212529;*/
 }
 
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
 
   #testimonials {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)) , url("assets/img/prison-1.jpg");
@@ -1306,25 +1305,25 @@ header {
     padding-bottom: 30px;
   }
 
-}
+}*/
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
 
   #testimonials {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)) , url("assets/img/prison-1.jpg");
     background-size: cover;
     height: 700px;
   }
-}
+}*/
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
 
   #testimonials {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.65)) , url("assets/img/prison-1.jpg");
     background-size: cover;
     height: 600px;
   }
-}
+}*/
 
 
 #logo-section {
