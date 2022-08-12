@@ -1249,6 +1249,19 @@ p {
     margin-right: 0;
   }
 }
+
+.coverpage{
+  padding-top: 20.5rem;
+  padding-bottom: 20rem;
+  background-image: url("assets/img/prison-1.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.title-logo{
+  padding-left: 5rem;
+
+}
  
  .masthead {
   padding-top: 10.5rem;
