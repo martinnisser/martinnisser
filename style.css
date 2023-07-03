@@ -1037,6 +1037,7 @@ textarea.form-control {
 .my-3 {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
+  height: 40px;
 }
 
 .me-1 {
