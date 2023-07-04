@@ -132,6 +132,12 @@ img {
   vertical-align: middle;
 }
 
+img.press_logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 button {
   border-radius: 0;
 }
@@ -405,6 +411,17 @@ textarea {
   min-height: 500px;
 }
 
+.press-row {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 576px) {
+  .press-row {
+    text-align: left;
+  }
+}
+
 @media (min-width: 576px) {
 
   .col-sm-0 {
@@ -446,6 +463,11 @@ textarea {
 }
 @media (min-width: 992px) {
 
+  .col-lg-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
   .col-lg-4 {
     flex: 0 0 auto;
     width: 33.33333333%;
@@ -454,6 +476,11 @@ textarea {
   .col-lg-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
+  }
+
+  .col-lg-9 {
+    flex: 0 0 auto;
+    width: 75%;
   }
 }
 @media (min-width: 1400px) {
