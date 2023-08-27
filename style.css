@@ -1687,6 +1687,21 @@ header.masthead .masthead-heading {
   margin-right: 6%;
 }
 
+.team-member-exec {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.team-member-exec img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+}
+.team-member-exec h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
