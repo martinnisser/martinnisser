@@ -229,6 +229,10 @@ textarea {
   height: auto;
 }
 
+
+
+
+
 .container {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
@@ -1674,9 +1678,19 @@ header.masthead .masthead-heading {
     padding: 0 100px 20px 20px;
   }
 }
+
+.coach-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
+  width: 18rem;
 }
 .team-member img {
   width: 14rem;
