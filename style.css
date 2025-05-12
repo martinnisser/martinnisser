@@ -2034,3 +2034,26 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+
+/* collapsible page sections */
+.collapsed-hidden {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .5s ease-in-out;
+}
+.page-section-uncollapsed .collapsed-hidden {
+  max-height:100vh;
+}
+
+.page-section {
+  transition: height 1s ease;
+  -moz-transition: height 1s ease;
+}
+.page-section h3 {
+  margin-bottom: 25px !important; /* overriding from somewhere else because I can't find the source */
+}
+
+.page-section-collapsed button, .page-section-uncollapsed button {
+  margin-bottom: 25px;
+}
