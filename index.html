@@ -38,46 +38,62 @@
 
     </head>
     <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container" >
-                <div class="logo-margin">
-                    <a href="#page-top"><img src="assets/img/logo-custom-wh.png" height = "70px" width="auto" alt="..." /></a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#">About</a>
-                            <ul>
-                                <li><a class="nav-link" href="#about">About Us</a></li>
-                                <li><a class="nav-link" href="#team">Our Team</a></li>
-                                <li><a class="nav-link" href="#partners">Our Partners</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="curriculum.html">Curriculum</a>
-                            <ul>
-                                <li><a class="nav-link" href="curriculum.html#web1">Web Design I</a></li>
-                                <li><a class="nav-link" href="curriculum.html#python">Python</a></li>
-                                <li><a class="nav-link" href="curriculum.html#web2">Web Design II</a></li>
-                                <li><a class="nav-link" href="curriculum.html#gamedesign">Game Design</a></li>
-                                <!-- <li><a class="nav-link" href="curriculum.html#spanish">BBB in Spanish</a></li> -->
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a>
-                            <ul>
-                                <li><a class="nav-link" href="testimonials.html#testimonials">Student Quotes</a></li>
-                                <li><a class="nav-link" href="testimonials.html#linda">Linda - Reentry Sisters</a></li>
-                                <li><a class="nav-link" href="testimonials.html#steve">Steven - Software Engineer</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="press.html">Press</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.zeffy.com/en-US/donation-form/e9923d43-06f0-4d3c-a7f7-a3c98119a12c">Donate</a></li>
-                    </ul>
-                </div>
+        <!-- Navigation following https://getbootstrap.com/docs/4.0/components/navbar/ and https://mdbootstrap.com/docs/standard/navigation/navbar/ -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="mainNav">
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/logo-custom-wh-cropped.png" height = "30px" width="auto" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown"><a
+                        data-mdb-dropdown-init
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        aria-expanded="false"
+                      >About</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#about">About Us</a></li>
+                            <li><a class="dropdown-item" href="#team">Our Team</a></li>
+                            <li><a class="dropdown-item" href="#partners">Our Partners</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a
+                        data-mdb-dropdown-init
+                        class="nav-link dropdown-toggle"
+                        href="curriculum.html"
+                        id="navbarDropdown"
+                        role="button"
+                        aria-expanded="false"
+                      >Curriculum</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="curriculum.html#web1">Web Design I</a></li>
+                            <li><a class="dropdown-item" href="curriculum.html#python">Python</a></li>
+                            <li><a class="dropdown-item" href="curriculum.html#web2">Web Design II</a></li>
+                            <li><a class="dropdown-item" href="curriculum.html#gamedesign">Game Design</a></li>
+                            <!-- <li><a class="nav-link" href="curriculum.html#spanish">BBB in Spanish</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a
+                        data-mdb-dropdown-init
+                        class="nav-link dropdown-toggle"
+                        href="testimonials.html"
+                        id="navbarDropdown"
+                        role="button"
+                        aria-expanded="false"
+                      >Testimonials</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="testimonials.html#testimonials">Student Quotes</a></li>
+                            <li><a class="dropdown-item" href="testimonials.html#linda">Linda - Reentry Sisters</a></li>
+                            <li><a class="dropdown-item" href="testimonials.html#steve">Steven - Software Engineer</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="press.html">Press</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.zeffy.com/en-US/donation-form/e9923d43-06f0-4d3c-a7f7-a3c98119a12c">Donate</a></li>
+                </ul>
             </div>
         </nav>
 
@@ -86,7 +102,7 @@
             <div class="overlay">
                 <div class="container">
                     <div class="title-logo">
-                        <img src="assets/img/logo-custom-wh.png" width="80%" alt="">
+                        <img src="assets/img/logo-custom-wh-cropped.png" width="80%" alt="">
                     </div>
                 </div>
             </div>
@@ -312,15 +328,16 @@
             </div>
         </section>
 
-        <section class="page-section bg-light">
-            <div class="container">
+        <section class="page-section bg-light page-section-collapsed" id="coaches">
+            <div class="container collapsed-visible">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Coaches</h2>
                     <h3 class="section-subheading text-muted">We are grateful for our amazing group of volunteer coaches, who bring a wide array of perspectives and professional experiences to the table. Our coaches include undergraduate students, graduate students, university faculty members, professional software engineers, and (formerly) incarcerated graduates of our program.</h3>
+                    <button id="toggleCoachesButton" data-label="coaches" data-state="show" onclick="toggleCollapsibleSection(this, 'coaches')">show coaches</button>
                 </div>
             </div>
 
-                <div class="text-center">
+                <div class="text-center collapsed-hidden">
                 <div id="carouselExampleDark" class="carousel carousel-dark slide bg-light" data-bs-ride="carousel" data-bs-interval="false">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -670,7 +687,23 @@
         </script>
 
         <script>
-        setTimeout(function(){ window.scrollTo(0,0); }, 10);
+            setTimeout(function(){ window.scrollTo(0,0); }, 10);
+        </script>
+
+        <script>
+            function toggleCollapsibleSection(btn, section_id) {
+                document.getElementById(section_id).classList.toggle("page-section-collapsed");
+                document.getElementById(section_id).classList.toggle("page-section-uncollapsed");
+                const label = btn.dataset.label;
+                const state = btn.dataset.state; 
+                if (state === 'show') {
+                    btn.innerHTML = `hide ${label}`;
+                    btn.dataset.state = 'hide';
+                } else {
+                    btn.innerHTML = `show ${label}`;
+                    btn.dataset.state = 'show';
+                }
+            }
         </script>
     </body>
 </html>

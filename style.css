@@ -752,137 +752,52 @@ textarea.form-control {
   display: none;
 }
 
-.nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #ff9c33;
-  text-decoration: none;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-}
-@media (prefers-reduced-motion: reduce) {
-  .nav-link {
-    transition: none;
-  }
-}
-.nav-link:hover, .nav-link:focus {
-  color: #fe8e18;
-}
-
+/* -------------------------------------------------------------------- */
+/* -------------------------- NAVBAR STYLES --------------------------- */
+/* -------------------------------------------------------------------- */
 .navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-/*  overflow: auto;*/
+  padding-right: 20px;
+  padding-left: 20px;
 }
-.navbar > .container {
-  display: flex;
-  flex-wrap: inherit;
-  align-items: center;
-  justify-content: space-between;
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
 }
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  align-items: flex-end;
+.navbar-nav .nav-item:hover .nav-link {
+  color: #fe8e18 !important;
+}
+.nav-item {
+  padding-left: 1rem;
+}
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
+.navbar-brand {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 .navbar-nav .nav-link {
-  padding-right: 0;
-  padding-left: 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  color: #ffffff !important;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
 }
 
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
+/* Dropdowns */
+.navbar .dropdown .dropdown-menu {
+  background-color: #212529 !important;
 }
-
-.navbar-toggler {
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  transition: box-shadow 0.15s ease-in-out;
+.navbar .dropdown .dropdown-menu > li > a {
+  background-color: #212529 !important;
+  color: #fff !important;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  font-weight: 300;
 }
-
-/* navbar dropdown menu  */
-
-
-.navbar ul li ul {
-  display: none;
+.navbar .dropdown .dropdown-menu > li > a:hover {
+  background-color: #141618 !important;
 }
-
-.navbar ul li:hover ul {
-  display: block;
-  position: absolute;
-  padding: 0px;
-  background: #212529;
-  padding: 10px;
-/*  border: 1px solid black;*/
-}
-
-.navbar ul li:hover ul li {
-  display: block;
-}
-
-.navbar ul li:hover ul li a {
-/*  color: black;*/
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-  .navbar-toggler {
-    transition: none;
-  }
-}
-.navbar-toggler:hover {
-  text-decoration: none;
-}
-.navbar-toggler:focus {
-  text-decoration: none;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem;
-}
-@media (min-width: 992px) {
-  .navbar-expand-lg {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-  .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
-  }
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-  .navbar-expand-lg .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-  .navbar-expand-lg .navbar-toggler {
-    display: none;
-  }
-}
-.navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.55);
-}
-.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
-}
-.navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 0.55);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
 
 /*start of carousel */
 
@@ -1292,52 +1207,8 @@ p {
   position: relative;
 }*/
 
-.logo-margin {
-  padding-right: 45px;
-  position: absolute;
-  left: 10rem;
-  top: 2px;
-/*  padding-top: 5px;
-  padding-bottom: 5px;*/
-}
 
-#mainNav {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  background-color: #212529;
-}
-#mainNav .navbar-toggler {
-  padding: 0.75rem;
-  font-size: 0.75rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  text-transform: uppercase;
-  font-weight: 700;
-}
-#mainNav .navbar-nav .nav-item .nav-link {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1.2rem;
-  color: #fff;
-  letter-spacing: 0.0625em;
-}
-#mainNav .navbar-nav .nav-item .nav-link:hover {
-  color:  #fe8e18 ;
-}
 
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    border: none;
-    /*background-color: transparent;*/
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
-  }
-  #mainNav .navbar-nav .nav-item {
-    margin-right: 1rem;
-  }
-  #mainNav .navbar-nav .nav-item:last-child {
-    margin-right: 0;
-  }
-}
 
 .coverpage{
   padding-top: 20.5rem;
@@ -2054,4 +1925,27 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+/* collapsible page sections */
+.collapsed-hidden {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .5s ease-in-out;
+}
+.page-section-uncollapsed .collapsed-hidden {
+  max-height:1000vh;
+}
+
+.page-section {
+  transition: height 1s ease;
+  -moz-transition: height 1s ease;
+}
+.page-section h3 {
+  margin-bottom: 25px !important; /* overriding from somewhere else because I can't find the source */
+}
+
+.page-section-collapsed button, .page-section-uncollapsed button {
+  margin-bottom: 25px;
 }
