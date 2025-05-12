@@ -2043,7 +2043,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   transition: max-height .5s ease-in-out;
 }
 .page-section-uncollapsed .collapsed-hidden {
-  max-height:100vh;
+  max-height:1000vh;
 }
 
 .page-section {
