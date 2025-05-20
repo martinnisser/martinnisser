@@ -1277,6 +1277,7 @@ p {
 
 .coverpage-testimonials {
   background-image: url("assets/img/DC 2024 pic7.jpeg");
+  background-position: center top !important;
 }
 .coverpage-curriculum {
   background-image: url("assets/img/DC 2024 pic6.jpeg");
