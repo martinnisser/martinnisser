@@ -1289,6 +1289,7 @@ p {
 
 .coverpage-contact{
   background-image: url("assets/img/DC 2024 pic3.jpeg");
+  background-position: center top !important;
 }
 
 .title-header h1{
