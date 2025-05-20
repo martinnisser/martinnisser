@@ -1234,6 +1234,25 @@ p {
   filter: grayscale(25%);
 }
 
+.coverpage .title-header {
+  display: none;
+}
+.coverpage .title-logo {
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  /* On mobile, display brave behind bars h1 instead of logo image */
+  .coverpage .title-logo {
+    display: none;
+  }
+  .coverpage .title-header {
+    display:  block;
+  }
+}
+
+
+
 .coverpage-testimonials{
   position: relative;
   padding-top: 20.5rem;
