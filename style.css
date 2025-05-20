@@ -1298,7 +1298,7 @@ p {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
-  font-size: 4rem;
+  font-size: 6rem;
   text-transform: uppercase;
 }
 
@@ -1377,6 +1377,17 @@ p {
   border-top: 5px solid #d2652d;
 }
 
+.snip1533.reentry-quote {
+  max-width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.snip1533.reentry-quote figcaption {
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+
 .snip1533 *,
 .snip1533 *:before {
   -webkit-box-sizing: border-box;
@@ -1425,6 +1436,11 @@ p {
   font-style: italic;
   font-weight: 300;
   margin: 0 0 20px;
+}
+
+.reentry-image {
+  width: 100%;
+  padding: 20px;
 }
 
 /*@media (min-width: 768px) {
