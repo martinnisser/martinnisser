@@ -788,6 +788,16 @@ textarea.form-control {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 600px) {
+  /* Right aline nav links on mobile */
+  .nav-link {
+    text-align:center;
+    padding-top:12px;
+    padding-bottom:4px;
+  }
+}
+
+
 /* Dropdowns */
 .navbar .dropdown .dropdown-menu {
   background-color: #212529 !important;
