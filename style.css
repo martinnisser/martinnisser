@@ -1376,6 +1376,17 @@ p {
   border-top: 5px solid #d2652d;
 }
 
+.snip1533.reentry-quote {
+  max-width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.snip1533.reentry-quote figcaption {
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+
 .snip1533 *,
 .snip1533 *:before {
   -webkit-box-sizing: border-box;
