@@ -762,6 +762,10 @@ textarea.form-control {
 .navbar {
   padding-right: 20px;
   padding-left: 20px;
+
+  /* the following seems to fix coverpage positioning to go behind the navbar and seems to have no other ill effects */
+  position: fixed;
+  width: 100vw;
 }
 .navbar-nav .dropdown:hover .dropdown-menu {
   display: block;
@@ -1217,111 +1221,20 @@ p {
   border-radius: 100%;
 }
 
-/*.navbar{
-  position: relative;
-}*/
-
-
-
-
 .coverpage{
-  padding-top: 20.5rem;
-  padding-bottom: 20rem;
-  background-image: url("assets/img/DC 2024 pic1.jpeg");
+  border-top:42.2px;
+  padding-left: 0;
+  padding-right: 0;
   background-size: cover;
-  background-position: center center;
   height: 100vh;
   filter: grayscale(25%);
 }
-
-.coverpage .title-header {
-  display: none;
-}
-.coverpage .title-logo {
-  display: block;
-}
-
-.title-logo{
-  left:0;
-  /*  padding-left: 5rem;*/
-    width: 100vw;
-  }
-.title-logo img {
-  position:relative;
-  width:80%;
-}
-
-@media only screen and (max-width: 600px) {
-  /* On mobile, display brave behind bars h1 instead of logo image */
-  .coverpage .title-logo {
-    display: none;
-  }
-  .coverpage .title-header {
-    display:  block;
-  }
-}
-
-
-
-.coverpage-testimonials{
-  position: relative;
-  padding-top: 20.5rem;
-  padding-bottom: 20rem;
-  background-image: url("assets/img/DC 2024 pic7.jpeg");
-  background-size: cover;
-  background-position: top center;
-  height: 100vh;
-  filter: grayscale(20%);
-}
-
-
-.coverpage-curriculum{
-  position: relative;
-  padding-top: 20.5rem;
-  padding-bottom: 20rem;
-  background-image: url("assets/img/DC 2024 pic6.jpeg");
-  background-size: cover;
-  background-position: top center;
-  height: 100vh;
-  filter: grayscale(25%);
-}
-
-.coverpage-press{
-  position: relative;
-  padding-top: 20.5rem;
-  padding-bottom: 20rem;
-  background-image: url("assets/img/DC-press-3-cropped.jpeg");
-  background-size: cover;
-  background-position: top center;
-  height: 100vh;
-  filter: grayscale(10%);
-}
-
-.coverpage-contact{
-  position: relative;
-  padding-top: 20.5rem;
-  padding-bottom: 20rem;
-  background-image: url("assets/img/DC 2024 pic3.jpeg");
-  background-size: cover;
-  background-position: top center;
-  height: 100vh;
-  filter: grayscale(25%);
-}
-
-.title-header h1{
-  text-align: center;
-  color: white;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  line-height: 1.2;
-  font-size: 4rem;
-  text-transform: uppercase;
-/*  margin-top: 45vh;*/
+.coverpage .title-header, .coverpage .title-logo {
+  margin-top: 42.2px;
 }
 
 .overlay{
   position: absolute;
-  top: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0,.1);
@@ -1332,17 +1245,59 @@ p {
   align-items: center;
 }
 
-.overlay-press{
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,.02);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.coverpage-about {
+  background-image: url("assets/img/DC 2024 pic1.jpeg");
+}
+
+.coverpage-about .title-header {
+  display: none;
+}
+.coverpage-about .title-logo {
+  display: block;
+  padding-right: 10vw;
+  padding-left: 10vw;
+}
+
+.title-logo img {
+  position:relative;
+  width:100% !important;
+}
+
+@media only screen and (max-width: 600px) {
+  /* On mobile, display brave behind bars h1 instead of logo image */
+  .coverpage-about .title-logo {
+    display: none;
+  }
+  .coverpage-about .title-header {
+    display:  block;
+    padding-left:20px;
+    padding-right:20px;
+  }
+}
+
+.coverpage-testimonials {
+  background-image: url("assets/img/DC 2024 pic7.jpeg");
+}
+.coverpage-curriculum {
+  background-image: url("assets/img/DC 2024 pic6.jpeg");
+}
+
+.coverpage-press{
+  background-image: url("assets/img/DC-press-3-cropped.jpeg");
+}
+
+.coverpage-contact{
+  background-image: url("assets/img/DC 2024 pic3.jpeg");
+}
+
+.title-header h1{
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 4rem;
+  text-transform: uppercase;
 }
 
 
