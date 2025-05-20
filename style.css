@@ -788,6 +788,16 @@ textarea.form-control {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 600px) {
+  /* Right aline nav links on mobile */
+  .nav-link {
+    text-align:center;
+    padding-top:12px;
+    padding-bottom:4px;
+  }
+}
+
+
 /* Dropdowns */
 .navbar .dropdown .dropdown-menu {
   background-color: #212529 !important;
@@ -1224,6 +1234,35 @@ p {
   filter: grayscale(25%);
 }
 
+.coverpage .title-header {
+  display: none;
+}
+.coverpage .title-logo {
+  display: block;
+}
+
+.title-logo{
+  left:0;
+  /*  padding-left: 5rem;*/
+    width: 100vw;
+  }
+.title-logo img {
+  position:relative;
+  width:80%;
+}
+
+@media only screen and (max-width: 600px) {
+  /* On mobile, display brave behind bars h1 instead of logo image */
+  .coverpage .title-logo {
+    display: none;
+  }
+  .coverpage .title-header {
+    display:  block;
+  }
+}
+
+
+
 .coverpage-testimonials{
   position: relative;
   padding-top: 20.5rem;
@@ -1307,10 +1346,7 @@ p {
 }
 
 
-.title-logo{
-/*  padding-left: 5rem;*/
-  width: 80vw;
-}
+
  
  .masthead {
   padding-top: 10.5rem;
