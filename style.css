@@ -1523,6 +1523,7 @@ header.masthead .masthead-heading {
   max-width: 26rem;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 20px;
 }
 #web1 .portfolio-item .portfolio-link {
   position: relative;
