@@ -1289,6 +1289,7 @@ p {
 
 .coverpage-contact{
   background-image: url("assets/img/DC 2024 pic3.jpeg");
+  background-position: center top !important;
 }
 
 .title-header h1{
@@ -1961,4 +1962,15 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .page-section-collapsed button, .page-section-uncollapsed button {
   margin-bottom: 25px;
+}
+
+
+.scroll-reveal {
+  transition: transform 0.75s, opacity 0.75s;
+  transform: translateY(150px);
+  opacity: 0;
+}
+.scroll-reveal.active{
+    transform: translateY(0);
+    opacity: 1;
 }
