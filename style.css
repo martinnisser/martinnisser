@@ -1222,7 +1222,7 @@ p {
 }
 
 .coverpage{
-  border-top:42.2px;
+  /* border-top:42.2px; */
   padding-left: 0;
   padding-right: 0;
   background-size: cover;
@@ -1247,6 +1247,7 @@ p {
 
 .coverpage-about {
   background-image: url("assets/img/DC 2024 pic1.jpeg");
+  background-position:center top;
 }
 
 .coverpage-about .title-header {
