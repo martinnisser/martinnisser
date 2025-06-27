@@ -1819,6 +1819,12 @@ header.masthead .masthead-heading {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .team-member-instructor {
+    width: 27%;
+  }
+}
+
 .team-member-instructor img {
   width: 14rem;
   height: 14rem;
