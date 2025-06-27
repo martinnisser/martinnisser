@@ -1246,7 +1246,7 @@ p {
 }
 
 .coverpage-about {
-  background-image: url("assets/img/DC 2024 pic1.jpeg");
+  background-image: url("assets/img/DC 2024 pic1_min.jpeg");
 }
 
 .coverpage-about .title-header {
@@ -1276,19 +1276,19 @@ p {
 }
 
 .coverpage-testimonials {
-  background-image: url("assets/img/DC 2024 pic7.jpeg");
+  background-image: url("assets/img/DC 2024 pic7_min.jpeg");
   background-position: center top !important;
 }
 .coverpage-curriculum {
-  background-image: url("assets/img/DC 2024 pic6.jpeg");
+  background-image: url("assets/img/DC 2024 pic6_min.jpeg");
 }
 
 .coverpage-press{
-  background-image: url("assets/img/DC-press-3-cropped.jpeg");
+  background-image: url("assets/img/DC-press-3-cropped_min.jpeg");
 }
 
 .coverpage-contact{
-  background-image: url("assets/img/DC 2024 pic3.jpeg");
+  background-image: url("assets/img/DC 2024 pic3_min.jpeg");
   background-position: center top !important;
 }
 
