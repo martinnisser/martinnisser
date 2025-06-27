@@ -1525,6 +1525,7 @@ header.masthead .masthead-heading {
   max-width: 26rem;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 20px;
 }
 #web1 .portfolio-item .portfolio-link {
   position: relative;
@@ -1817,6 +1818,12 @@ header.masthead .masthead-heading {
   width: 18.5rem;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .team-member-instructor {
+    width: 27%;
+  }
 }
 
 .team-member-instructor img {
