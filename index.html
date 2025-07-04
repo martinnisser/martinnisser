@@ -766,71 +766,107 @@
                 teamMembers.forEach(member => tempContainer.appendChild(member.cloneNode(true)));
             
                 // Calculate items per row
-                const rows = 3;
+                // -------------------------------------------------------------------
+                //  A)  How many columns & rows fit in THIS window?  
+                // -------------------------------------------------------------------
+                const headingH     = document.getElementById('carousel-headings')
+                                    ?.getBoundingClientRect().height || 0;
+                const availHeight  = window.innerHeight - headingH;
+                const firstTop     = tempContainer.children[0].getBoundingClientRect().top;
+
+                // columns (same as before)
                 let itemsPerRow = 0;
-                let firstTop = null;
-                for (let i = 0; i < tempContainer.children.length; i++) {
-                    const top = tempContainer.children[i].getBoundingClientRect().top;
-                    if (firstTop === null) firstTop = top;
-                    if (top !== firstTop) break;
-                    itemsPerRow++;
+                for (let i = 0; i < tempContainer.children.length; i++){
+                const top = tempContainer.children[i].getBoundingClientRect().top;
+                if (top !== firstTop) break;
+                itemsPerRow++;
                 }
-            
-                const itemsPerPage = itemsPerRow * rows;
-                const totalSlides = Math.ceil(teamMembers.length / itemsPerPage);
+
+                // rows = how many whole card rows fit in availHeight
+                const secondRowTop = tempContainer.children[itemsPerRow]
+                                    ?.getBoundingClientRect().top || firstTop;
+                const rowHeight    = secondRowTop - firstTop ||
+                                    tempContainer.children[0].getBoundingClientRect().height;
+                const itemsPerColumn =
+                    Math.max(1, Math.floor(availHeight / rowHeight));
+
+                const itemsPerPage = itemsPerRow * itemsPerColumn;
                 document.body.removeChild(tempContainer);
 
-                // == helper so we can label each slide ==
-                function sliceHasPrior(slice){
-                    return slice.some(m => m.dataset.status === 'prior');
+                // -------------------------------------------------------------------
+                //  B)  Split the data once: current list, prior list
+                // -------------------------------------------------------------------
+                const currentMembers = teamMembers.filter(m => m.dataset.status === 'current');
+                const priorMembers   = teamMembers.filter(m => m.dataset.status === 'prior');
+
+                // helper -- pads a slide so the grid stays “full”
+                function padSlide(container, missing){
+                while (missing--){
+                    const dummy = document.createElement('div');
+                    dummy.className = 'team-member';
+                    dummy.style.visibility = 'hidden';
+                    container.appendChild(dummy);
                 }
-            
-                for (let i = 0; i < totalSlides; i++) {
-                    const slide = document.createElement('div');
-                    slide.classList.add('carousel-item');
-                    if (i === 0) slide.classList.add('active');
-            
-                    const container = document.createElement('div');
-                    container.className = 'coach-container mb-5 d-flex flex-wrap justify-content-center';
-            
-
-
-                    // 1️⃣ slice once, store it
-                    const membersForSlide = teamMembers.slice(
-                    i * itemsPerPage,
-                    (i + 1) * itemsPerPage
-                    );
-
-                    // 2️⃣ label this slide (“current” vs “prior”)
-                    const slideType = membersForSlide.some(m => m.dataset.status === 'prior')
-                    ? 'prior'
-                    : 'current';
-                    slide.dataset.type = slideType;     //—so the heading swapper can read it
-
-                    // 3️⃣ now append the clones just like before
-                    membersForSlide.forEach(member =>
-                    container.appendChild(member.cloneNode(true)));
-
-
-
-
-                    slide.appendChild(container);
-                    carouselInner.appendChild(slide);
-                    console.log('added slide', i, 'type=', slideType);          //  ← add this
-
-            
-                    const indicator = document.createElement('button');
-                    indicator.type = 'button';
-                    indicator.setAttribute('data-bs-target', '#carouselExampleDark');
-                    indicator.setAttribute('data-bs-slide-to', i);
-                    indicator.setAttribute('aria-label', `Slide ${i + 1}`);
-                    if (i === 0) {
-                        indicator.classList.add('active');
-                        indicator.setAttribute('aria-current', 'true');
-                    }
-                    carouselIndicators.appendChild(indicator);
                 }
-                setHeading(document.querySelector('#carouselExampleDark .carousel-item.active').dataset.type);
+
+                function makeSlide(members, slideType, isActive = false){
+                const slide = document.createElement('div');
+                slide.className = 'carousel-item' + (isActive ? ' active' : '');
+                slide.dataset.type = slideType;
+
+                const wrap  = document.createElement('div');
+                wrap.className =
+                    'coach-container d-flex flex-wrap justify-content-center';
+                members.forEach(m => wrap.appendChild(m.cloneNode(true)));
+
+                // pad if this slice is short (so grid still fills)
+                if (members.length < itemsPerPage)
+                    padSlide(wrap, itemsPerPage - members.length);
+
+                slide.appendChild(wrap);
+                carouselInner.appendChild(slide);
+                }
+
+                // -------------------------------------------------------------------
+                //  C)  Build slides
+                // -------------------------------------------------------------------
+                //    1️⃣  one or more “current” slides (never mixed)
+                for (let i = 0; i < currentMembers.length; i += itemsPerPage){
+                makeSlide(
+                    currentMembers.slice(i, i + itemsPerPage),
+                    'current',
+                    i === 0               // first slide is .active
+                );
+                }
+
+                //    2️⃣  now all-prior slides
+                for (let i = 0; i < priorMembers.length; i += itemsPerPage){
+                makeSlide(priorMembers.slice(i, i + itemsPerPage), 'prior');
+                }
+
+                // -------------------------------------------------------------------
+                //  D)  Bootstrap dot indicators
+                // -------------------------------------------------------------------
+                carouselIndicators.innerHTML = '';          // clear old dots
+                const totalSlides = carouselInner.children.length;
+
+                for (let i = 0; i < totalSlides; i++){
+                const dot = document.createElement('button');
+                dot.type  = 'button';
+                dot.dataset.bsTarget = '#carouselExampleDark';
+                dot.dataset.bsSlideTo = i;
+                dot.ariaLabel = `Slide ${i + 1}`;
+                if (i === 0){
+                    dot.classList.add('active');
+                    dot.setAttribute('aria-current', 'true');
+                }
+                carouselIndicators.appendChild(dot);
+                }
+
+                // correct banner on first paint
+                setHeading('current');
+                // -------------------------------------------------------------------
+
             }
             
             window.addEventListener('load', buildCarousel);
