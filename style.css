@@ -1443,6 +1443,21 @@ p {
   padding: 20px;
 }
 
+#steve-image {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 1024px) {
+  #steve-image {
+  width: 45%;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 0px;
+  float: right;
+}
+
 /*@media (min-width: 768px) {
 
   #testimonials {
