@@ -740,7 +740,9 @@
         </script>
         <script>
             function buildCarousel() {
+                // const teamMembers = Array.from(document.querySelectorAll('#all-team-members .team-member'));
                 const teamMembers = Array.from(document.querySelectorAll('#all-team-members .team-member'));
+
                 console.log('teamMembers found →', teamMembers.length);
                 const carouselInner = document.querySelector('#carouselExampleDark .carousel-inner');
                 const carouselIndicators = document.querySelector('#carouselExampleDark .carousel-indicators');

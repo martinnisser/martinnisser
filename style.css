@@ -829,7 +829,8 @@ textarea.form-control {
 #carouselExampleDark,
 #carouselExampleDark .carousel-inner,
 #carouselExampleDark .carousel-item {
-  height: 100vh;            /* use the whole viewport */
+  height: 80vh;            /* use the whole viewport */
+  width: 95vw;
 }
 
 .carousel {
