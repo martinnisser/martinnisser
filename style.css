@@ -821,9 +821,21 @@ textarea.form-control {
 
 * { box-sizing: border-box; }
 
+.carousel-heading { transition: transform .6s ease, opacity .6s ease; }
+.translate-x--100 { transform: translateX(-100%); }
+.translate-x-100  { transform: translateX(100%);  }
+.opacity-0        { opacity: 0; }
+
+#carouselExampleDark,
+#carouselExampleDark .carousel-inner,
+#carouselExampleDark .carousel-item {
+  height: 80vh;            /* use the whole viewport */
+  width: 95vw;
+}
 
 .carousel {
   background: white;
+  width:100%;
 }
 
 .carousel-cell {
@@ -1222,7 +1234,7 @@ p {
 }
 
 .coverpage{
-  border-top:42.2px;
+  /* border-top:42.2px; */
   padding-left: 0;
   padding-right: 0;
   background-size: cover;
@@ -1821,12 +1833,15 @@ header.masthead .masthead-heading {
 }
 
 .coach-container {
+  /* fills the slide, leaves room for the heading bar (2 rem here)   */
+  height: calc(100vh - 2rem);
+  overflow: hidden;         /* just in case */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: 6%;
-  margin-right: 6%;
+  align-content: flex-start;  /* start at the top */
 }
+
 
 .team-member-exec {
   margin-bottom: 3rem;
@@ -2011,3 +2026,6 @@ section#contact form#contactForm :-ms-input-placeholder {
     transform: translateY(0);
     opacity: 1;
 }
+
+
+
