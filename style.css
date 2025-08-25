@@ -821,7 +821,7 @@ textarea.form-control {
 
 * { box-sizing: border-box; }
 
-.carousel-heading { transition: transform .6s ease, opacity .6s ease; }
+/* .carousel-heading { transition: transform .6s ease, opacity .6s ease; }
 .translate-x--100 { transform: translateX(-100%); }
 .translate-x-100  { transform: translateX(100%);  }
 .opacity-0        { opacity: 0; }
@@ -829,13 +829,13 @@ textarea.form-control {
 #carouselExampleDark,
 #carouselExampleDark .carousel-inner,
 #carouselExampleDark .carousel-item {
-  height: 80vh;            /* use the whole viewport */
+  height: 80vh;           
   width: 95vw;
-}
+} */
 
 .carousel {
   background: white;
-  width:100%;
+  /* width:100%; */
 }
 
 .carousel-cell {
@@ -1468,6 +1468,7 @@ p {
   padding-bottom: 1rem;
   padding-right: 0px;
   float: right;
+}
 }
 
 /*@media (min-width: 768px) {
