@@ -233,10 +233,6 @@ textarea {
   height: auto;
 }
 
-
-
-
-
 .container {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
@@ -1259,6 +1255,7 @@ p {
 
 .coverpage-about {
   background-image: url("assets/img/DC 2024 pic1_min.jpeg");
+  background-position: center center !important;
 }
 
 .coverpage-about .title-header {
@@ -1291,17 +1288,37 @@ p {
   background-image: url("assets/img/DC 2024 pic7_min.jpeg");
   background-position: center top !important;
 }
+
+.coverpage-curriculum {
+  background-image: url("assets/img/curriculum-mobile.jpeg");
+}
+
+@media (min-width: 768px) {
 .coverpage-curriculum {
   background-image: url("assets/img/DC 2024 pic6_min.jpeg");
 }
+}
 
+.coverpage-press{
+  background-image: url("assets/img/press-mobile.jpeg");
+}
+
+@media (min-width: 768px) {
 .coverpage-press{
   background-image: url("assets/img/DC-press-3-cropped_min.jpeg");
 }
+}
 
+.coverpage-contact{
+  background-image: url("assets/img/contact-mobile.jpeg");
+  background-position: center top !important;
+}
+
+@media (min-width: 768px) {
 .coverpage-contact{
   background-image: url("assets/img/DC 2024 pic3_min.jpeg");
   background-position: center top !important;
+}
 }
 
 .title-header h1{
@@ -1310,10 +1327,15 @@ p {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
-  font-size: 6rem;
+  font-size: 10vw;
   text-transform: uppercase;
 }
 
+@media (min-width: 820px) {
+  .title-header h1{
+      font-size: 6rem;
+}
+}
 
 
  
@@ -1378,15 +1400,26 @@ p {
   display: inline-block;
 /*  font-family: 'Roboto', Arial, sans-serif;*/
   font-size: 20px;
-  margin: 45px 20px 20px;
-  max-width: 450px;
-  min-width: 350px;
+
   position: relative;
   text-align: center;
-  width: 100%;
+  max-width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+
   background-color: #ffffff;
   border-radius: 5px;
   border-top: 5px solid #d2652d;
+}
+
+@media (min-width: 768px) {
+  .snip1533 {
+    max-width: 450px;
+  min-width: 350px;
+    width: 100%;
+      margin: 45px 20px 20px;
+
+}
 }
 
 .snip1533.reentry-quote {
