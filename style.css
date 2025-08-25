@@ -1819,12 +1819,14 @@ header.masthead .masthead-heading {
 
 .coach-container {
   /* fills the slide, leaves room for the heading bar (2 rem here)   */
-  height: calc(100vh - 2rem);
-  overflow: hidden;         /* just in case */
+  /* height: calc(100vh - 2rem); */
+  /* overflow: hidden;   */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;  /* start at the top */
+  margin-left: 6%;
+  margin-right: 6%;
+  /* align-content: flex-start; */
 }
 
 
