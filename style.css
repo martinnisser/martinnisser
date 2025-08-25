@@ -810,7 +810,7 @@ textarea.form-control {
 
 * { box-sizing: border-box; }
 
-.carousel-heading { transition: transform .6s ease, opacity .6s ease; }
+/* .carousel-heading { transition: transform .6s ease, opacity .6s ease; }
 .translate-x--100 { transform: translateX(-100%); }
 .translate-x-100  { transform: translateX(100%);  }
 .opacity-0        { opacity: 0; }
@@ -818,13 +818,13 @@ textarea.form-control {
 #carouselExampleDark,
 #carouselExampleDark .carousel-inner,
 #carouselExampleDark .carousel-item {
-  height: 80vh;            /* use the whole viewport */
+  height: 80vh;           
   width: 95vw;
-}
+} */
 
 .carousel {
   background: white;
-  width:100%;
+  /* width:100%; */
 }
 
 .carousel-cell {
@@ -1845,12 +1845,14 @@ header.masthead .masthead-heading {
 
 .coach-container {
   /* fills the slide, leaves room for the heading bar (2 rem here)   */
-  height: calc(100vh - 2rem);
-  overflow: hidden;         /* just in case */
+  /* height: calc(100vh - 2rem); */
+  /* overflow: hidden;   */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;  /* start at the top */
+  margin-left: 6%;
+  margin-right: 6%;
+  /* align-content: flex-start; */
 }
 
 
