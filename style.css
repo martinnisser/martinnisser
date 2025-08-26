@@ -774,6 +774,17 @@ textarea.form-control {
   margin-left: 0 !important;
 }
 
+.navbar-brand img {
+  height: 26px;
+  width: auto;
+}
+
+@media (min-width: 390px) {
+.navbar-brand img {
+  height: 30px;
+}
+}
+
 .navbar-nav .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
@@ -1284,6 +1295,7 @@ p {
 
 .coverpage-curriculum {
   background-image: url("assets/img/curriculum-mobile.jpeg");
+  background-position: center top;
 }
 
 @media (min-width: 768px) {
@@ -1293,12 +1305,12 @@ p {
 }
 
 .coverpage-press{
-  background-image: url("assets/img/press-mobile.jpeg");
+  background-image: url("assets/img/press-mobile.png");
 }
 
 @media (min-width: 768px) {
 .coverpage-press{
-  background-image: url("assets/img/DC-press-3-cropped_min.jpeg");
+  background-image: url("assets/img/press-background.png");
 }
 }
 
@@ -1324,10 +1336,47 @@ p {
   text-transform: uppercase;
 }
 
+.coverpage-about .title-header h1 {
+  font-size: 17vw;
+}
+
+.coverpage-curriculum .title-header h1 {
+  font-size: 13vw;
+}
+
+.coverpage-testimonials .title-header h1 {
+  font-size: 12vw;
+}
+
+.coverpage-press .title-header h1 {
+  font-size: 17vw;
+}
+
+.coverpage-contact .title-header h1 {
+  font-size: 17vw;
+}
+
 @media (min-width: 820px) {
   .title-header h1{
       font-size: 6rem;
 }
+
+  .coverpage-curriculum .title-header h1 {
+      font-size: 6rem;
+}
+
+  .coverpage-testimonials .title-header h1{
+      font-size: 6rem;
+}
+
+  .coverpage-press .title-header h1 {
+      font-size: 6rem;
+}
+
+  .coverpage-contact .title-header h1 {
+      font-size: 6rem;
+}
+
 }
 
 
