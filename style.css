@@ -885,6 +885,10 @@ textarea.form-control {
   }
 }
 
+.carousel-indicators {
+  transform: translateY(20px);
+}
+
 /* buttons, no circle */
 .flickity-prev-next-button {
   width: 60px;
