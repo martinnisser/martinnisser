@@ -766,73 +766,126 @@
             }
         </script>
         <script>
-            function buildCarousel() {
-                const teamMembers = Array.from(document.querySelectorAll('#all-team-members .team-member'));
-                const carouselInner = document.querySelector('#carouselExampleDark .carousel-inner');
-                const carouselIndicators = document.querySelector('#carouselExampleDark .carousel-indicators');
-            
-                // Clear previous content
-                carouselInner.innerHTML = '';
-                carouselIndicators.innerHTML = '';
-            
-                if (teamMembers.length === 0) return;
-            
-                // Create a temporary flex container to measure layout
-                const tempContainer = document.createElement('div');
-                tempContainer.style.display = 'flex';
-                tempContainer.style.flexWrap = 'wrap';
-                tempContainer.style.visibility = 'hidden';
-                tempContainer.style.position = 'absolute';
-                tempContainer.style.pointerEvents = 'none';
-                tempContainer.style.width = '100%';
-                tempContainer.classList.add('coach-container');
-            
-                document.body.appendChild(tempContainer);
-            
-                teamMembers.forEach(member => tempContainer.appendChild(member.cloneNode(true)));
-            
-                // Calculate items per row
-                const rows = 2;
-                let itemsPerRow = 0;
-                let firstTop = null;
-                for (let i = 0; i < tempContainer.children.length; i++) {
-                    const top = tempContainer.children[i].getBoundingClientRect().top;
-                    if (firstTop === null) firstTop = top;
-                    if (top !== firstTop) break;
-                    itemsPerRow++;
-                }
-            
-                const itemsPerPage = itemsPerRow * rows;
-                const totalSlides = Math.ceil(teamMembers.length / itemsPerPage);
-                document.body.removeChild(tempContainer);
-            
-                for (let i = 0; i < totalSlides; i++) {
-                    const slide = document.createElement('div');
-                    slide.classList.add('carousel-item');
-                    if (i === 0) slide.classList.add('active');
-            
-                    const container = document.createElement('div');
-                    container.className = 'coach-container mb-5 d-flex flex-wrap justify-content-center';
-            
-                    teamMembers
-                        .slice(i * itemsPerPage, (i + 1) * itemsPerPage)
-                        .forEach(member => container.appendChild(member.cloneNode(true)));
-            
-                    slide.appendChild(container);
-                    carouselInner.appendChild(slide);
-            
-                    const indicator = document.createElement('button');
-                    indicator.type = 'button';
-                    indicator.setAttribute('data-bs-target', '#carouselExampleDark');
-                    indicator.setAttribute('data-bs-slide-to', i);
-                    indicator.setAttribute('aria-label', `Slide ${i + 1}`);
-                    if (i === 0) {
-                        indicator.classList.add('active');
-                        indicator.setAttribute('aria-current', 'true');
-                    }
-                    carouselIndicators.appendChild(indicator);
-                }
-            }
+            const fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+
+function imagesReady(root) {
+  const imgs = Array.from(root.querySelectorAll('img'));
+  if (!imgs.length) return Promise.resolve();
+  return Promise.all(imgs.map(img => img.complete ? Promise.resolve()
+    : new Promise(res => { img.addEventListener('load', res, {once:true}); img.addEventListener('error', res, {once:true}); })));
+}
+
+function countFirstRowItems(container) {
+  const kids = Array.from(container.children);
+  if (!kids.length) return 0;
+  const firstTop = kids[0].offsetTop;
+  let n = 0;
+  for (const el of kids) { if (el.offsetTop !== firstTop) break; n++; }
+  return n;
+}
+
+async function measureItemsPerRow() {
+  const carousel = document.querySelector('#carouselExampleDark');
+  const carouselInner = carousel.querySelector('.carousel-inner');
+  const teamMembers = Array.from(document.querySelectorAll('#all-team-members .team-member'));
+
+  // Probe slide that matches real slide styling
+  const probeSlide = document.createElement('div');
+  probeSlide.className = 'carousel-item active';          // <- IMPORTANT: active
+  Object.assign(probeSlide.style, {
+    position: 'absolute', left: '-99999px', top: '0',
+    visibility: 'hidden', display: 'block', width: '100%'
+  });
+
+  const probeContainer = document.createElement('div');
+  probeContainer.className = 'coach-container mb-5 d-flex flex-wrap justify-content-center';
+  probeSlide.appendChild(probeContainer);
+
+  // Put the probe into the real carousel context
+  carouselInner.appendChild(probeSlide);
+
+  // Fill with clones so wrapping is realistic
+  teamMembers.forEach(m => probeContainer.appendChild(m.cloneNode(true)));
+
+  await fontsReady;
+  await imagesReady(probeContainer);
+
+  const perRow = Math.max(1, countFirstRowItems(probeContainer));
+
+  carouselInner.removeChild(probeSlide);
+  return perRow;
+}
+
+function buildWith(itemsPerPage) {
+  const teamMembers = Array.from(document.querySelectorAll('#all-team-members .team-member'));
+  const carousel = document.querySelector('#carouselExampleDark');
+  const carouselInner = carousel.querySelector('.carousel-inner');
+  const carouselIndicators = carousel.querySelector('.carousel-indicators');
+
+  carouselInner.innerHTML = '';
+  carouselIndicators.innerHTML = '';
+
+  const totalSlides = Math.ceil(teamMembers.length / itemsPerPage);
+
+  for (let i = 0; i < totalSlides; i++) {
+    const slide = document.createElement('div');
+    slide.className = 'carousel-item' + (i === 0 ? ' active' : '');
+
+    const container = document.createElement('div');
+    container.className = 'coach-container mb-5 d-flex flex-wrap justify-content-center';
+
+    teamMembers.slice(i * itemsPerPage, (i + 1) * itemsPerPage)
+      .forEach(m => container.appendChild(m.cloneNode(true)));
+
+    slide.appendChild(container);
+    carouselInner.appendChild(slide);
+
+    const indicator = document.createElement('button');
+    indicator.type = 'button';
+    indicator.setAttribute('data-bs-target', '#carouselExampleDark');
+    indicator.setAttribute('data-bs-slide-to', i);
+    indicator.setAttribute('aria-label', `Slide ${i+1}`);
+    if (i === 0) { indicator.classList.add('active'); indicator.setAttribute('aria-current', 'true'); }
+    carouselIndicators.appendChild(indicator);
+  }
+}
+
+function countRows(container) {
+  const tops = new Set(Array.from(container.children).map(el => el.offsetTop));
+  return tops.size;
+}
+
+async function buildCarousel() {
+  const rows = 2;
+
+  // 1) Measure (active probe)
+  let perRow = await measureItemsPerRow();
+  let itemsPerPage = perRow * rows;
+
+  // 2) Build
+  buildWith(itemsPerPage);
+
+  // 3) Verify & auto-correct if needed
+  const activeContainer = document.querySelector('#carouselExampleDark .carousel-item.active .coach-container');
+  let r = countRows(activeContainer);
+  let guard = 0;
+  while (r > rows && perRow > 1 && guard < 6) {
+    perRow -= 1;
+    itemsPerPage = perRow * rows;
+    buildWith(itemsPerPage);
+    r = countRows(document.querySelector('#carouselExampleDark .carousel-item.active .coach-container'));
+    guard++;
+  }
+
+  updateCoachHeader();
+}
+
+// debounce & hooks
+function debounce(fn, ms=200){ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a), ms); }; }
+window.addEventListener('load', buildCarousel);
+window.addEventListener('resize', debounce(buildCarousel, 200));
+document.querySelector('#carouselExampleDark').addEventListener('slid.bs.carousel', updateCoachHeader);
+
 
             function updateCoachHeader() {
                 const currentHeader = document.querySelector('#coachHeaderCurrent');
