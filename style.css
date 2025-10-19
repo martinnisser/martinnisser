@@ -757,6 +757,30 @@ textarea.form-control {
   position: fixed;
   width: 100vw;
 }
+
+@media (max-width: 991.98px) { 
+  .navbar-collapse { text-align:right; } 
+}
+
+/* Default: large screens (≥992px) */
+.dropdown-menu {
+  text-align: left;
+}
+
+/* Medium screens (600px–991.98px) */
+@media (min-width: 600px) and (max-width: 991.98px) {
+  .dropdown-menu {
+    text-align: right;
+  }
+}
+
+/* Small screens (<600px) */
+@media (max-width: 599.98px) {
+  .dropdown-menu {
+    text-align: center;
+  }
+}
+
 .navbar-nav .dropdown:hover .dropdown-menu {
   display: block;
 }
