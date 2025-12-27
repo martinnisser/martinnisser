@@ -1342,7 +1342,7 @@ p {
 
 @media (min-width: 768px) {
 .coverpage-press{
-  background-image: url("assets/img/press-background.png");
+  background-image: url("assets/img/press-background_min.jpg");
 }
 }
 
